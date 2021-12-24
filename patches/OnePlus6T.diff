@@ -32,7 +32,7 @@ diff --color -ru a/usr/share/unity8/Panel/PanelMenu.qml b/usr/share/unity8/Panel
              left: parent.left
              right: parent.right
 +            // HAX: extra margin for right side of curved screen corners
-+            rightMargin: expanded ? 0 : units.gu(4)
++            rightMargin: expanded ? 0 : units.gu(1.8)
          }
          expanded: false
          enableLateralChanges: false
@@ -46,8 +46,8 @@ diff --color -ru a/usr/share/unity8/Shell.qml b/usr/share/unity8/Shell.qml
 -            minimizedPanelHeight: units.gu(3)
 -            expandedPanelHeight: units.gu(7)
 +            // HAX: match panel height with notch & add extra space for it in expanded mode
-+            minimizedPanelHeight: units.gu(5)
-+            expandedPanelHeight: units.gu(7.1) + (shell.orientationAngle == 0 ? minimizedPanelHeight : 0)
++            minimizedPanelHeight: units.gu(3.9)
++            expandedPanelHeight: units.gu(7) + (shell.orientationAngle == 0 ? minimizedPanelHeight : 0)
              applicationMenuContentX: launcher.lockedVisible ? launcher.panelWidth : 0
  
              indicators {
